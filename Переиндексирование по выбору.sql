@@ -4,7 +4,7 @@ DECLARE @cmd NVARCHAR(1000)
 DECLARE DatabaseCursor CURSOR READ_ONLY FOR  
 SELECT name FROM master.sys.databases   
 WHERE name NOT IN ('master','msdb','tempdb','model','distribution')  -- исключаемые базы данных
---WHERE name IN ('') -- используется для выбора конкретных баз данных (раскомментируйте эту строку)
+---WHERE name IN ('ut') -- используется для выбора конкретных баз данных (раскомментируйте эту строку)
 AND state = 0 -- база данных онлайн
 AND is_in_standby = 0 -- база данных не читается только для log shipping
 ORDER BY 1  
