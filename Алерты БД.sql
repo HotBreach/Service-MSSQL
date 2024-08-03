@@ -2,7 +2,7 @@ DECLARE @operatorName as NVARCHAR(100);
 DECLARE @operatorEmail as NVARCHAR(100);
   
 SET @operatorName = N'AdminDB'; -- REPLACE THIS WITH THE OPERATOR NAME
-SET @operatorEmail = N'rogoznikov@lamel.biz'; -- REPLACE THIS WITH THE OPERATOR EMAIL
+SET @operatorEmail = N''; -- REPLACE THIS WITH THE OPERATOR EMAIL
   
 IF NOT EXISTS(SELECT * FROM msdb..sysoperators WHERE name = @operatorName) 
 BEGIN
